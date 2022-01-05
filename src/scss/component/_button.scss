@@ -1,0 +1,51 @@
+.btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn--primary--outline:hover {
+  background-color: $primary-color;
+  transform: translateY(-3px);
+  color: $first-color;
+  transition: ease-in-out 0.2s;
+}
+
+.btn--primary--solid {
+  background-color: $primary-color;
+  color: $first-color;
+  border: none;
+  width: 90%;
+}
+.btn--yellow--solid {
+  background-color: $first-color;
+  color: $primary-color;
+  border: none;
+}
+.btn--primary--outline {
+  background-color: transparent;
+  color: $primary-color;
+  border: 2px solid $primary-color;
+  width: 95%;
+}
+
+.btn--yellow--outline {
+  background-color: transparent;
+  color: $first-color;
+  border: 2px solid $first-color;
+}
+
+/* button sizes */
+.btn--large {
+  padding: 10px 20px;
+  font-size: 18px;
+}
+.btn--medium {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+.btn--small {
+  padding: 8px 18px;
+  font-size: 14px;
+}

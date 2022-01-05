@@ -1,0 +1,18 @@
+// import abstracts
+@import "./abstract/variable";
+@import "./abstract/typography";
+
+// import  base
+@import "./base/base";
+
+// import  page
+@import "./page/homepage";
+
+// import container
+@import "./container/rightContainer";
+
+// import  components
+@import "./component/searchBar";
+@import "./component/animated";
+@import "./component/button";
+@import "./component/wordInfo";

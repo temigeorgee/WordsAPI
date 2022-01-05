@@ -1,0 +1,31 @@
+.home-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #d8e56b;
+  background-image: -webkit-linear-gradient(
+    90deg,
+    #d8e56b 55%,
+    $primary-color 0
+  );
+  background-size: cover;
+  background-position: 100%;
+  @media (min-width: 720px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0 0;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #d8e56b;
+    background-image: -webkit-linear-gradient(
+      180deg,
+      #d8e56b 50%,
+      $primary-color 0
+    );
+    background-size: cover;
+    background-position: 100%;
+  }
+}
