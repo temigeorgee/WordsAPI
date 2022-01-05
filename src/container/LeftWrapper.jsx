@@ -47,9 +47,14 @@ const LeftWrapper = ({ setSwitcher, switcher }) => {
             </p>
 
             {el.synonyms && (
-              <p className="text-gray-400 text-xs lg:text-base mx-2">
-                Synonyms : {truncate(el.synonyms, 10)}
-              </p>
+              <div>
+                <span className="text-gray-400 text-xs lg:text-base">
+                  Synonyms :
+                </span>
+                <p className="text-gray-400 text-xs lg:text-base mx-2">
+                  {truncate(el.synonyms, 10)}
+                </p>
+              </div>
             )}
           </>
         ))}
@@ -63,7 +68,9 @@ const LeftWrapper = ({ setSwitcher, switcher }) => {
         <ul className="flex justify-between items-center text-gray-400 text-xs lg:text-base max-w-sm">
           Syllables:
           {randomData?.syllables?.list.map((el) => (
-            <li className="text-gray-400 text-xs lg:text-base mx-4">{el}</li>
+            <li className="text-gray-400 text-xs lg:text-base mx-4">
+              {truncate(el, 5)}
+            </li>
           ))}
         </ul>
       )}
