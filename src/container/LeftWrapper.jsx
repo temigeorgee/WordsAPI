@@ -4,7 +4,7 @@ import axios from "axios";
 
 const LeftWrapper = () => {
   const [randomData, setRandomData] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [setLoading] = useState(false);
   useEffect(() => {
     const abortController = new AbortController();
     setLoading(true);
