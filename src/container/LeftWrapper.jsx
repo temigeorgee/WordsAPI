@@ -47,14 +47,10 @@ const LeftWrapper = ({ setSwitcher, switcher }) => {
             </p>
 
             {el.synonyms && (
-              <div>
-                <span className="text-gray-400 text-xs lg:text-base">
-                  Synonyms :
-                </span>
-                <p className="text-gray-400 text-xs lg:text-base mx-2">
-                  {truncate(el.synonyms, 10)}
-                </p>
-              </div>
+              <p className="text-gray-400 text-xs lg:text-base mx-2">
+                <span>Synonyms :</span>
+                {truncate(el.synonyms, 8)}
+              </p>
             )}
           </>
         ))}
@@ -69,7 +65,8 @@ const LeftWrapper = ({ setSwitcher, switcher }) => {
           Syllables:
           {randomData?.syllables?.list.map((el) => (
             <li className="text-gray-400 text-xs lg:text-base mx-4">
-              {truncate(el, 5)}
+              {" "}
+              {truncate(el.synonyms, 8)}
             </li>
           ))}
         </ul>
