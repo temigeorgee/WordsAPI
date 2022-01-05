@@ -66,7 +66,7 @@ const LeftWrapper = ({ setSwitcher, switcher }) => {
           {randomData?.syllables?.list.map((el) => (
             <li className="text-gray-400 text-xs lg:text-base mx-4">
               {" "}
-              {truncate(el.synonyms, 8)}
+              {truncate(el, 10)}
             </li>
           ))}
         </ul>
