@@ -6,10 +6,10 @@ import axios from "axios";
 import OptionFetcher from "../utils/ApiRequest";
 import Loader from "../component/Loader";
 
-const RightWrapper = () => {
+const RightWrapper = ({ setSwitcher }) => {
   const [searchInput, setSearchInput] = useState("");
   const [searchedWord, setSearchedWord] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState(false);
   const [loading, setLoading] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const clearSearchInputToggle = () => {
@@ -26,17 +26,18 @@ const RightWrapper = () => {
       setLoading(true);
       const { data } = await axios.request(OptionFetcher(searchInput));
       setSearchedWord(data);
+      setErrorMessage(false);
       setLoading(false);
     } catch (error) {
       // console.log(error.response);
       setLoading(true);
-      setErrorMessage(error.response.status);
+      setErrorMessage(true);
       setLoading(false);
     }
   };
-  console.log("rightwrapper", errorMessage);
   const handleRandom = () => {
     setIsLoading(true);
+    setSwitcher(true);
     window.location.reload("/");
     setIsLoading(false);
   };

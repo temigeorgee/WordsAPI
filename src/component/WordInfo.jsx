@@ -3,18 +3,19 @@ import React from "react";
 const WordInfo = ({ searchedWord, errorMessage, loading }) => {
   return (
     <div className="word">
-      {/* {errorMessage && <p> Word not found</p>} */}
+      {errorMessage && <p> Word not found</p>}
 
       <div className="word-text">
         <p className="font-bold text-2xl leading-5  my-3 primary uppercase">
-          {searchedWord && searchedWord?.word}
+          {!errorMessage && searchedWord && searchedWord?.word}
         </p>
         {/* <p className="text-gray-400 text-xs uppercase my-2">/ {el.partOfSpeech} /</p> */}
       </div>
 
       <ul className="word-meaning flex flex-col justify-between items-start gap-1 space-y-3 max-h-72 overflow-scroll mt-3">
         {searchedWord && searchedWord.length > 0 && "Definition"}
-        {searchedWord &&
+        {!errorMessage &&
+          searchedWord &&
           searchedWord?.results?.map((el) => (
             <li className="border-l-4 border-primary px-3 text-base primary">
               {el?.definition}

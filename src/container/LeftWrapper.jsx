@@ -2,18 +2,18 @@ import { useEffect, useState } from "react";
 import OptionFetcher from "../utils/ApiRequest";
 import axios from "axios";
 
-const LeftWrapper = () => {
+const LeftWrapper = ({ setSwitcher, switcher }) => {
   const [randomData, setRandomData] = useState("");
-  const [setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     const abortController = new AbortController();
     setLoading(true);
     axios
       .request(OptionFetcher("?random=true"))
-
       .then(function (response) {
         setLoading(false);
         setRandomData(response.data);
+        setSwitcher(true);
       })
       .catch(function (error) {
         console.error(error);
@@ -22,14 +22,17 @@ const LeftWrapper = () => {
     return () => {
       abortController.abort();
     };
-  }, []);
+  }, [setSwitcher]);
 
+  if (loading) {
+    return <h1>...</h1>;
+  }
   return (
     <div className="left-container flex justify-center items-start flex-col space-y-8  px-6 lg:px-10 lg:mt-96 container ">
       <div className="py-1 w-4/6 bg-white md:mt-28 xl:mt-32" />
 
       <h2 className="text-white text-3xl lg:text-8xl font-thin lg:max-w-sm">
-        {randomData.word}
+        {!loading && randomData.word}
       </h2>
       {randomData?.results &&
         randomData?.results.slice(0, 1).map((el) => (
@@ -65,6 +68,7 @@ const LeftWrapper = () => {
       )}
       <div className="py-1 w-4/6 bg-white" />
     </div>
+    // }
   );
 };
 
