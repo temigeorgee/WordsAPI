@@ -12,6 +12,7 @@
   );
   background-size: cover;
   background-position: 100%;
+  overflow: hidden;
   @media (min-width: 720px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
