@@ -30,3 +30,17 @@ html {
   padding-left: 25px;
   padding-right: 25px;
 }
+::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: darken($color: $first-color, $amount: 5);
+  height: 10px;
+  /* background-color: hsl(186, 52%, 78%); */
+  border-radius: 3px;
+  // border: 0;
+}
+::-webkit-scrollbar-track {
+  background-color: $primary-color;
+  opacity: 0.3;
+}

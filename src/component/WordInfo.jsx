@@ -2,7 +2,7 @@ import React from "react";
 
 const WordInfo = ({ searchedWord, errorMessage }) => {
   return (
-    <div className="word container  max-h-80 overflow-scroll pb-10 z-10 ">
+    <div className="word container  max-h-80 overflow-y-scroll pb-10 z-10 ">
       {errorMessage && <p> Word not found</p>}
 
       <div className="word-text">
