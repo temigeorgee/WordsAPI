@@ -17,7 +17,7 @@ const WordInfo = ({ searchedWord, errorMessage }) => {
         {!errorMessage &&
           searchedWord &&
           searchedWord?.results?.map((el) => (
-            <li className="border-l-4 border-primary px-3 text-base primary sm:text-sm">
+            <li className="border-l-4 border-primary px-3 lg:text-base primary text-xs">
               {el?.definition}
               <span>
                 <p className="text-gray-400 text-xs uppercase my-2">
