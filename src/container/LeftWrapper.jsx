@@ -64,7 +64,7 @@ const LeftWrapper = ({ setSwitcher, switcher }) => {
         <ul className="flex justify-between items-center text-gray-400 text-xs lg:text-base max-w-sm">
           Syllables:
           {randomData?.syllables?.list.map((el) => (
-            <li className="text-gray-400 text-xs lg:text-base mx-4">
+            <li className="text-gray-400 text-xs lg:text-base mx-2">
               {" "}
               {truncate(el, 10)}
             </li>
