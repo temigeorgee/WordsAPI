@@ -31,10 +31,14 @@
 }
 .wrapper .search {
   position: relative;
-  margin: 35px 0 18px;
+  margin: 0px 0 18px;
+  @media (min-width: 720px) {
+    margin: 35px 0 18px;
+  }
 }
 
 input {
+  background-color: transparent;
   border: 1px solid $primary-color;
 }
 input:focus {

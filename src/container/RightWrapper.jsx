@@ -42,7 +42,7 @@ const RightWrapper = ({ setSwitcher }) => {
     setIsLoading(false);
   };
   return (
-    <div className="flex items-center justify-center mb-12  flex-col lg:mt-52 space-y-5 container lg:pt-16">
+    <div className="flex items-center justify-center flex-col lg:mt-52 space-y-5 container lg:pt-16 overflow-y-scroll lg:overflow-hidden mb-20 pt-7">
       <SearchBar
         clearSearchInputToggle={clearSearchInputToggle}
         handleSearchInput={handleSearchInput}

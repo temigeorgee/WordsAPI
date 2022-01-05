@@ -9,7 +9,7 @@ const HomePage = () => {
     <div className="home-container">
       <LeftWrapper setSwitcher={setSwitcher} switcher={switcher} />
       <RightWrapper setSwitcher={setSwitcher} switcher={switcher} />
-      <AnimatedText text="Dictionary" />
+      <AnimatedText text="Word Search" />
     </div>
   );
 };

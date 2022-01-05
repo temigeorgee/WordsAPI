@@ -31,7 +31,7 @@ const LeftWrapper = ({ setSwitcher, switcher }) => {
     <div className="left-container flex justify-center items-start flex-col space-y-8  px-6 lg:px-10 lg:mt-96 container ">
       <div className="py-1 w-4/6 bg-white md:mt-28 xl:mt-32" />
 
-      <h2 className="text-white text-3xl lg:text-8xl font-thin lg:max-w-sm">
+      <h2 className="text-white text-3xl lg:text-8xl font-thin lg:max-w-sm truncate lcapitalize max-w-xl opacity-95 outline-2">
         {!loading && randomData.word}
       </h2>
       {randomData?.results &&

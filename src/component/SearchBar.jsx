@@ -15,7 +15,7 @@ const SearchBar = (props) => {
             spellCheck="false"
             value={props.searchInput}
             onChange={props.handleSearchInput}
-            className="h-12 w-full outline-none text-lg  px-10  bg-transparent"
+            className="md:h-12 w-full outline-none lg:text-lg  lg:px-10  bg-transparent md:px-10 px-9 text-sm h-8"
           />
           <FiSearch className="search-icon" />
           <span
